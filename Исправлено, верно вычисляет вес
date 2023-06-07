@@ -1,0 +1,24 @@
+class Necklace
+    {
+        public List<Stone> ListOfStones = new List<Stone>();
+
+        public void WeightCount()
+        {
+            double totalWeight = 0;
+            foreach (Stone p in ListOfStones)
+            {
+                totalWeight += p.GetWeight();
+            }
+            Console.WriteLine("Общий вес {0}:", totalWeight);
+        }
+
+        public void PriceCount()
+        {
+            decimal totalPrice = 0;
+            foreach (Stone p in ListOfStones)
+            {
+                totalPrice += p.GetPrice();
+            }
+            Console.WriteLine("Общая стоимость {0}:", totalPrice);
+        }
+      }
